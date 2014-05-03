@@ -834,6 +834,7 @@ define Image/Build/NetgearNAND/buildkernel
 	# append the fake rootfs image to the kernel, it will reside in the last
 	# erase block of the kernel partition
 	cat $(KDIR_TMP)/fakeroot-$(2).uImage >> $(KDIR_TMP)/vmlinux-$(2).uImage
+	cp $(KDIR_TMP)/vmlinux-$(2).uImage $(UIMAGE)-flashable.bin
 endef
 
 
